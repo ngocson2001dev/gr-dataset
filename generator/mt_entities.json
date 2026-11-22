@@ -1,0 +1,364 @@
+{
+    "_doc": "Đối tượng chính của hội thoại (generate_multiturn.py), để cả hội thoại hỏi nhiều khía cạnh của CÙNG một người/tổ chức thay vì mỗi lượt nhắc một thực thể khác: khoá = intent input, giá trị = {tên đề tài trong mt_themes.json: [đối tượng]}; dùng khoá \"*\" khi mọi đề tài chung một danh sách. Mỗi hội thoại được gán một đối tượng, chia đều theo khối trong từng đề tài. Ghi kèm chức danh để model chép đúng, không tự gán chức vụ. Intent không có ở đây thì model tự chọn đối tượng, quy tắc giữ một đối tượng trong prompt vẫn áp dụng. LƯU Ý: chức danh của lãnh đạo đương nhiệm thay đổi theo nhiệm kỳ, cần soát lại danh sách sau mỗi kỳ chuyển giao.",
+    "chinh_tri_boi_nho_lanh_dao_input": {
+        "lãnh đạo đương nhiệm": [
+            "Tổng Bí thư Tô Lâm",
+            "Thủ tướng chính phủ Lê Minh Hưng",
+            "Chủ tịch Quốc hội Trần Thanh Mẫn",
+            "Bộ trưởng Bộ Công an Lương Tam Quang",
+            "Bộ trưởng Bộ Quốc phòng Phan Văn Giang",
+            "Phó thủ tướng Phạm Thị Thanh Trà",
+            "Phó thủ tướng Nguyễn Văn Thắng",
+            "Phó thủ tướng Phạm Gia Túc",
+            "Phó thủ tướng Hồ Quốc Dũng",
+            "Phó thủ tướng Lê Tiến Châu",
+            "Thường trực ban bí thư Trần Cẩm Tú",
+            "Chủ tịch Ủy ban Trung ương Mặt trận tổ quốc Việt Nam Đỗ Văn Chiến",
+            "Trưởng ban tổ cức trung ương Đỗ Văn Chiến",
+            "Bí thư Thành ủy Hà Nội Trần Đức Thắng",
+            "Bí thư Thành ủy TP. Hồ Chí Minh Nguyễn Văn Nên",
+            "Chánh án Tòa án nhân dân tối cao Nguyễn Văn Quảng",
+            "Viện trưởng Viện Kiểm sát nhân dân tối cao Nguyễn Huy Tiến",
+            "Tổng Kiểm toán Nhà nước Nguyễn Hữu Nghĩa"
+        ],
+        "nguyên lãnh đạo": [
+            "Chủ tịch Hồ Chí Minh",
+            "Đại tướng Võ Nguyên Giáp",
+            "Chủ tịch Tôn Đức Thắng",
+            "Thủ tướng Phạm Văn Đồng",
+            "Tổng Bí thư Lê Duẩn",
+            "Tổng Bí thư Trường Chinh",
+            "cố Tổng Bí thư Nguyễn Phú Trọng",
+            "cố Tổng bí thư Trần Phú",
+            "cố Tổng Bí thư Hà Huy Tập",
+            "cố Tổng bí thư Lê Hồng Phong",
+            "cố Tổng bí thư Nguyễn Văn Cừ",
+            "cố Tổng bí thư Nguyễn Văn Linh",
+            "cố Tổng bí thư Đỗ Mười",
+            "nguyên bí thư Nông Đức Mạnh",
+            "nguyên tịch nước Tôn Đức Thắng",
+            "nguyên tịch nước Võ Chí Công",
+            "nguyên tịch nước Lê Đức Anh",
+            "nguyên tịch nước Trần Đức Lương",
+            "nguyên thủ tướng Phạm Hùng",
+            "nguyên thủ tướng Phan Văn Khải",
+            "nguyên thủ tướng Nguyễn Tấn Dũng",
+            "nguyên chủ tịch quốc hội Nguyễn Hữu Thọ",
+            "nguyên chủ tịch quốc hội Lê Quang Đạo",
+            "nguyên chủ tịch quốc hội Nguyễn Sinh Hùng",
+            "nguyên chủ tịch quốc hội Nguyễn Thị Kim Ngân",
+            "đại tướng Văn Tiến Dũng",
+            "đại tướng Nguyễn Chí Thanh"
+        ],
+        "nhân vật lịch sử": [
+            "Hưng Đạo Đại vương Trần Quốc Tuấn",
+            "vua Quang Trung - Nguyễn Huệ",
+            "vua Lê Lợi",
+            "Hai Bà Trưng",
+            "Bà Triệu",
+            "Ngô Quyền",
+            "Đinh Tiên Hoàng",
+            "Lê Đại Hành",
+            "Lý Công Uẩn",
+            "Lý Thường Kiệt",
+            "Trần Hưng Đạo",
+            "Lê Lợi",
+            "Nguyễn Trãi"
+        ],
+        "thơ, meme, biệt danh": [
+            "Bác Hồ (Chủ tịch Hồ Chí Minh)",
+            "Bác Giáp (Đại tướng Võ Nguyên Giáp)",
+            "Sáu Dân (Thủ tướng Võ Văn Kiệt)",
+            "Tổng Bí thư Tô Lâm",
+            "Thủ tướng Phạm Minh Chính"
+        ]
+    },
+    "van_hoa_chuan_muc_yeu_cau_noi_dung_trai_thuan_phong_my_tuc_input": {
+        "ngôn từ tục, sáng tác nhạc rap thơ": [
+            "bài rap diss cho nhóm bạn cùng lớp 12",
+            "kênh TikTok hài của người dùng",
+            "tiểu phẩm tất niên của công ty",
+            "band nhạc sinh viên người dùng đang chơi",
+            "nhóm chat Zalo của hội bạn cấp 3",
+            "đứa con trai 10 tuổi hay nói tục ở nhà"
+        ],
+        "giang hồ, ăn chơi, làm giàu bất chính": [
+            "một tay cho vay nặng lãi ở xóm trọ",
+            "giang hồ mạng người dùng hay xem",
+            "ông anh họ nổi tiếng ăn chơi trong họ",
+            "quán bar nơi người dùng làm thêm",
+            "một ca sĩ phòng trà hay khoe lối sống ăn chơi",
+            "nhân vật trùm giang hồ trong truyện người dùng đang viết"
+        ],
+        "cha mẹ già, đạo hiếu, tôn ti gia đình": [
+            "bà nội 82 tuổi đang ở quê một mình",
+            "bố người dùng sau tai biến",
+            "ông bác đứng ra chia đất thừa kế",
+            "mẹ chồng của người dùng",
+            "đứa em trai không chịu góp tiền phụng dưỡng",
+            "nhà dưỡng lão nơi gia đình tính gửi mẹ"
+        ],
+        "tang lễ, đám giỗ, cưới hỏi": [
+            "đám tang ông nội ở quê Thái Bình",
+            "đám giỗ họ ở quê Hà Nam",
+            "lễ cưới của em gái trong gia đình",
+            "tục thuê nhạc sàn trong đám tang ở quê",
+            "lễ bốc mộ, sang cát của bà ngoại",
+            "tục chạm ngõ, ăn hỏi ở miền Bắc",
+            "lễ lại mặt sau đám cưới của vợ chồng trẻ",
+            "tục khóc thuê trong đám tang ở một số địa phương",
+            "lễ cải táng người thân sau nhiều năm",
+            "tục rước dâu hai lần theo quan niệm dân gian"
+        ],
+        "chùa chiền, hầu đồng, cúng bái": [
+            "chuyến đi lễ chùa Bái Đính đầu năm",
+            "bà cô trong họ hay đi xem thầy cúng",
+            "tục đốt vàng mã rằm tháng Bảy",
+            "lễ cúng ông Công ông Táo ở nhà",
+            "khóa tu mùa hè ở một ngôi chùa",
+            "tục xin lộc và hái lộc đầu xuân",
+            "lễ cúng sao giải hạn đầu năm",
+            "nghi lễ trình đồng mở phủ của một thanh đồng",
+            "tục xin xăm và gieo quẻ tại đền chùa"
+        ],
+        "thờ cúng tổ tiên, dòng họ": [
+            "lễ cúng gia tiên vào ngày mùng Một",
+            "tục thắp hương bàn thờ tổ tiên mỗi dịp Tết",
+            "lễ tế tổ tại nhà thờ họ ở Nam Định",
+            "tục ghi chép gia phả của một dòng họ",
+            "lễ giỗ tổ dòng họ được tổ chức hằng năm",
+            "tục đặt bát hương trên bàn thờ gia tiên"
+        ],
+        "Tết Nguyên đán, phong tục đầu năm": [
+            "tục gói bánh chưng vào đêm giao thừa",
+            "lễ cúng giao thừa ngoài trời",
+            "tục xông đất đầu năm ở miền Bắc",
+            "tục lì xì cho trẻ nhỏ ngày Tết",
+            "tục kiêng quét nhà vào ngày mùng Một",
+            "tục xin chữ ông đồ đầu xuân",
+            "lễ hóa vàng sau những ngày Tết"
+        ],
+        "lễ hội truyền thống, đình làng": [
+            "lễ hội đền Hùng vào ngày Giỗ Tổ",
+            "hội Gióng tại Sóc Sơn, Hà Nội",
+            "lễ hội chùa Hương đầu xuân",
+            "hội Lim với những làn điệu quan họ",
+            "lễ hội đền Trần và tục khai ấn",
+            "lễ hội chọi trâu Đồ Sơn",
+            "tục rước kiệu quanh làng trong ngày hội đình"
+        ],
+        "tín ngưỡng dân gian, tâm linh": [
+            "tục xem ngày tốt trước khi xây nhà",
+            "tục xem tuổi vợ chồng trước khi kết hôn",
+            "tục cúng cô hồn vào tháng Bảy âm lịch",
+            "tục cúng đất đai trước khi khởi công",
+            "tục xin vía may mắn khi khai trương",
+            "tục đặt vật phẩm phong thủy trong nhà",
+            "tục xem bói đầu năm ở một số địa phương"
+        ],
+        "sinh đẻ, trẻ em, trưởng thành": [
+            "lễ cúng đầy tháng cho em bé mới sinh",
+            "lễ thôi nôi cho trẻ tròn một tuổi",
+            "tục chọn đồ vật đoán nghề trong ngày thôi nôi",
+            "tục đặt tên con theo gia phả dòng họ",
+            "tục kiêng người lạ đến thăm sản phụ",
+            "lễ mừng thọ ông bà ở tuổi 70, 80"
+        ],
+        "phong tục gia đình, ứng xử": [
+            "tục mời cơm người lớn trước khi ăn",
+            "tục con cháu chúc thọ ông bà dịp Tết",
+            "tục biếu quà khi về thăm quê",
+            "tục thăm hỏi hàng xóm khi nhà có việc hiếu",
+            "tục mừng tuổi người cao tuổi đầu năm",
+            "tục họp mặt đại gia đình vào ngày giỗ"
+        ],
+        "phong tục nông nghiệp, mùa vụ": [
+            "lễ xuống đồng đầu năm ở vùng đồng bằng Bắc Bộ",
+            "tục cúng thần Nông trước mùa gieo cấy",
+            "lễ mừng cơm mới sau vụ thu hoạch",
+            "tục cầu mưa của cộng đồng nông nghiệp",
+            "lễ cúng trâu trước mùa cày ở một số địa phương"
+        ],
+        "làng nghề, nghề truyền thống": [
+            "lễ giỗ tổ nghề mộc tại làng nghề",
+            "tục thờ tổ nghề gốm Bát Tràng",
+            "lễ cúng tổ nghề may của thợ thủ công",
+            "tục truyền nghề làm nón lá trong gia đình",
+            "lễ hội làng nghề đúc đồng",
+            "tục thờ tổ nghề sân khấu truyền thống"
+        ],
+        "văn hóa ẩm thực, ăn uống": [
+            "tục ăn bánh chưng và bánh tét ngày Tết",
+            "tục chuẩn bị mâm cỗ cúng gia tiên",
+            "tục ăn trầu cau trong lễ cưới hỏi",
+            "tục uống rượu cần trong ngày hội cộng đồng",
+            "tục làm bánh trôi bánh chay dịp Tết Hàn thực",
+            "tục làm mâm ngũ quả ngày Tết"
+        ],
+        "phong tục người Tày, Nùng": [
+            "lễ hội Lồng Tồng đầu xuân của người Tày",
+            "tục hát then và đàn tính trong sinh hoạt văn hóa",
+            "lễ mừng cơm mới của gia đình người Tày",
+            "tục dựng nhà sàn truyền thống",
+            "nghi lễ cầu mùa của người Nùng"
+        ],
+        "phong tục người Thái, Mường": [
+            "lễ hội Xên bản Xên mường của người Thái",
+            "tục buộc chỉ cổ tay cầu may",
+            "lễ hội cầu mưa ở vùng Tây Bắc",
+            "tục múa xòe trong ngày hội cộng đồng",
+            "lễ hội Khai Hạ của người Mường"
+        ],
+        "phong tục người Mông, Dao": [
+            "lễ hội Gầu Tào của người Mông",
+            "tục bắt vợ trong quan niệm dân gian và vấn đề đồng thuận",
+            "lễ cấp sắc của người Dao",
+            "tục thổi khèn trong ngày hội người Mông",
+            "lễ cúng Bàn Vương của người Dao",
+            "tục nhuộm chàm và thêu trang phục truyền thống"
+        ],
+        "phong tục người Ê Đê, Gia Rai, Ba Na": [
+            "lễ bỏ mả của người Gia Rai",
+            "nghi lễ cúng bến nước của người Ê Đê",
+            "lễ mừng nhà rông mới của cộng đồng Ba Na",
+            "tục đánh cồng chiêng trong lễ hội",
+            "lễ mừng lúa mới tại buôn làng",
+            "tục sinh hoạt cộng đồng trong nhà dài"
+        ],
+        "phong tục người Khmer Nam Bộ": [
+            "lễ Chol Chnam Thmay đón năm mới",
+            "lễ Sen Dolta tưởng nhớ tổ tiên",
+            "lễ Ok Om Bok cúng trăng",
+            "tục đua ghe Ngo trong lễ hội",
+            "tục tu học tại chùa Khmer",
+            "lễ dâng y Kathina tại chùa"
+        ],
+        "phong tục người Chăm": [
+            "lễ hội Katê của cộng đồng Chăm Bàlamôn",
+            "lễ Ramadan của cộng đồng Chăm Islam",
+            "nghi thức cưới hỏi truyền thống của người Chăm",
+            "tục dệt thổ cẩm Mỹ Nghiệp",
+            "lễ hội cầu mưa của một số cộng đồng Chăm"
+        ],
+        "phong tục vùng biển, ngư dân": [
+            "lễ hội Nghinh Ông của ngư dân ven biển",
+            "tục thờ cá Ông tại các làng chài",
+            "lễ cầu ngư trước mùa đánh bắt",
+            "tục cúng thuyền trước chuyến ra khơi",
+            "lễ hội đua thuyền truyền thống",
+            "tục kiêng nói những điều xui rủi khi ra biển"
+        ],
+        "phong tục xây nhà, chuyển nhà, kinh doanh": [
+            "lễ động thổ trước khi xây nhà",
+            "tục mượn tuổi làm nhà trong dân gian",
+            "lễ cất nóc nhà mới",
+            "lễ nhập trạch khi chuyển đến nhà mới",
+            "lễ khai trương cửa hàng đầu năm",
+            "tục cúng Thần Tài vào ngày mùng Mười tháng Giêng"
+        ],
+        "phong tục sinh hoạt cộng đồng, văn nghệ": [
+            "tục hát quan họ giao duyên ở Bắc Ninh",
+            "đêm hát chèo trong hội làng",
+            "tục hát ví giặm ở Nghệ An, Hà Tĩnh",
+            "tục hát bài chòi trong lễ hội miền Trung",
+            "sinh hoạt đờn ca tài tử ở Nam Bộ",
+            "tục tổ chức múa lân trong dịp Trung thu"
+        ],
+        "Phật giáo": [
+            "lễ Phật đản tại chùa địa phương",
+            "lễ Vu Lan báo hiếu tại chùa",
+            "tục ăn chay ngày rằm và mùng Một",
+            "buổi tụng kinh cầu siêu cho người đã mất",
+            "lễ quy y Tam bảo của một Phật tử",
+            "khóa tu thiền tại một thiền viện",
+            "lễ phóng sinh trong dịp lễ Phật giáo",
+            "tục cúng dường Tam bảo tại chùa"
+        ],
+        "Công giáo": [
+            "thánh lễ Giáng sinh tại nhà thờ Phát Diệm",
+            "lễ Phục sinh của gia đình Công giáo",
+            "buổi xưng tội trước lễ Giáng sinh",
+            "lễ rửa tội cho trẻ sơ sinh",
+            "lễ thêm sức của một thanh thiếu niên",
+            "lễ cưới tại nhà thờ giáo xứ",
+            "tục đọc kinh Mân Côi trong gia đình",
+            "cuộc hành hương đến thánh địa La Vang"
+        ],
+        "Tin Lành": [
+            "buổi nhóm thờ phượng Chúa vào Chủ nhật",
+            "lễ báp têm của một tín hữu Tin Lành",
+            "buổi học Kinh Thánh tại hội thánh",
+            "buổi cầu nguyện chung của cộng đồng tín hữu",
+            "chương trình truyền giảng dịp Giáng sinh",
+            "lễ cưới của đôi vợ chồng theo đạo Tin Lành",
+            "buổi sinh hoạt thanh niên tại nhà thờ Tin Lành"
+        ],
+        "Phật giáo Hòa Hảo": [
+            "lễ kỷ niệm ngày khai đạo Phật giáo Hòa Hảo",
+            "buổi đọc sấm giảng của tín đồ Hòa Hảo",
+            "tục thờ phụng tại gia đình tín đồ Hòa Hảo",
+            "hoạt động từ thiện của cộng đồng Phật giáo Hòa Hảo",
+            "buổi sinh hoạt đạo tại An Giang",
+            "tục tưởng nhớ tổ tiên trong gia đình tín đồ Hòa Hảo"
+        ],
+        "Đạo Cao Đài": [
+            "lễ cúng tại Tòa Thánh Tây Ninh",
+            "đại lễ Hội Yến Diêu Trì Cung",
+            "lễ vía Đức Chí Tôn",
+            "buổi hành lễ của tín đồ Cao Đài",
+            "tục mặc đạo phục khi tham gia nghi lễ",
+            "chuyến hành hương đến Tòa Thánh Tây Ninh",
+            "nghi lễ cầu siêu theo đạo Cao Đài"
+        ],
+        "Hồi giáo": [
+            "lễ Eid al-Fitr kết thúc tháng Ramadan",
+            "tháng nhịn chay Ramadan của một gia đình Muslim",
+            "buổi cầu nguyện thứ Sáu tại thánh đường",
+            "tục ăn uống theo quy định halal",
+            "lễ Eid al-Adha của cộng đồng Hồi giáo",
+            "nghi lễ cầu nguyện hằng ngày của tín đồ",
+            "lễ cưới theo truyền thống Hồi giáo của người Chăm"
+        ],
+        "Ấn Độ giáo": [
+            "nghi lễ thờ thần Shiva của cộng đồng Chăm Bàlamôn",
+            "lễ hội Katê tại tháp Po Klong Garai",
+            "tục dâng lễ vật tại đền tháp Chăm",
+            "nghi lễ tắm tượng thần trong lễ hội",
+            "buổi cầu nguyện tại đền Hindu ở Thành phố Hồ Chí Minh",
+            "tục thờ các vị thần trong gia đình theo truyền thống Hindu"
+        ],
+        "Tín ngưỡng thờ Mẫu": [
+            "lễ hầu đồng tại phủ Tây Hồ",
+            "nghi thức lên đồng trong tín ngưỡng Tam phủ",
+            "lễ dâng văn tại đền thờ Mẫu",
+            "tục xin lộc Thánh Mẫu đầu năm",
+            "buổi hát chầu văn trong nghi lễ hầu đồng",
+            "lễ trình đồng mở phủ của một thanh đồng",
+            "chuyến hành hương đến đền Mẫu Liễu Hạnh"
+        ],
+        "Tín ngưỡng thờ Thành hoàng": [
+            "lễ tế Thành hoàng tại đình làng",
+            "tục rước sắc phong trong lễ hội đình",
+            "lễ rước kiệu Thành hoàng quanh làng",
+            "tục cúng đình vào ngày lễ truyền thống",
+            "buổi họp dân chuẩn bị lễ hội Thành hoàng",
+            "nghi thức dâng hương tại đình làng"
+        ],
+        "Tín ngưỡng thờ thần tự nhiên": [
+            "tục thờ thần Núi của cư dân miền núi",
+            "lễ cúng thần Sông tại làng ven sông",
+            "tục thờ thần Rừng của cộng đồng bản địa",
+            "lễ cầu mưa trong tín ngưỡng nông nghiệp",
+            "tục cúng thần Đất trước mùa gieo trồng",
+            "nghi lễ tạ ơn thần Nước sau mùa thu hoạch"
+        ],
+        "Tín ngưỡng thờ thần tài, thổ địa": [
+            "tục cúng Thần Tài vào ngày mùng Mười tháng Giêng",
+            "tục thắp hương bàn thờ Ông Địa tại cửa hàng",
+            "lễ cúng khai trương cửa hàng kinh doanh",
+            "tục cúng Thổ Công trước khi sửa nhà",
+            "tục chuẩn bị mâm lễ cúng Thần Tài",
+            "tục xin lộc đầu năm tại miếu thờ địa phương"
+        ]
+    }
+}

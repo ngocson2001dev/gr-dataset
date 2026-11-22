@@ -1,0 +1,7 @@
+📡 Single_turn_vita_v2.8.jsonl: 10 turn, API v2 (/v2/input, /v2/output), 10 luồng, nghỉ 3.0s giữa 2 lượt (khi U không bị BLOCK)
+   log    -> /opt/ai-alignment/intents-vita-207/eval/results/uat_v207_20261102_084638/run.log.gz
+   result -> /opt/ai-alignment/intents-vita-207/eval/results/uat_v207_20261102_084638/results.jsonl
+   [███░░░░░░░░░░░░░░░░░░░░░░░░░░░]  10.0%  1/10 turn · 0.79s/turn · còn ~7s      [██████░░░░░░░░░░░░░░░░░░░░░░░░]  20.0%  2/10 turn · 0.40s/turn · còn ~3s      [█████████░░░░░░░░░░░░░░░░░░░░░]  30.0%  3/10 turn · 0.26s/turn · còn ~1s      [████████████░░░░░░░░░░░░░░░░░░]  40.0%  4/10 turn · 1.03s/turn · còn ~6s      [███████████████░░░░░░░░░░░░░░░]  50.0%  5/10 turn · 0.83s/turn · còn ~4s      [██████████████████░░░░░░░░░░░░]  60.0%  6/10 turn · 0.69s/turn · còn ~2s      [█████████████████████░░░░░░░░░]  70.0%  7/10 turn · 0.59s/turn · còn ~1s      [████████████████████████░░░░░░]  80.0%  8/10 turn · 0.52s/turn · còn ~1s      [███████████████████████████░░░]  90.0%  9/10 turn · 0.46s/turn · còn ~0s      [██████████████████████████████] 100.0%  10/10 turn · 0.41s/turn · còn ~0s   
+🏁 Xong Phase 1: 10/10 turn từ intents-vita-207/dataset/Single_turn_vita_v2.8.jsonl.
+👉 Chạy Phase 2 để lấy report (chạy từ gốc repo):
+   python intents-vita-207/eval/run_eval_v207.py --phase 2 --run-dir intents-vita-207/eval/results/uat_v207_20261102_084638

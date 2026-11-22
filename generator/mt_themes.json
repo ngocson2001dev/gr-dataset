@@ -1,0 +1,1178 @@
+{
+ "_doc": "Đề tài của khía cạnh user (subprompt input) cho generate_multiturn.py, để mỗi hội thoại đi theo mạch: khoá = intent input, giá trị = {tên đề tài: [mã khía cạnh A…/S…]}. Một khía cạnh có thể thuộc nhiều đề tài (đề tài đầu tiên là đề tài chính). Mỗi đề tài nên có từ 3 khía cạnh an toàn để các lượt an toàn không lặp ý. Intent chưa khai tuyến HARD_NEG thì kế hoạch dùng một đề tài và thứ tự khía cạnh an toàn trong subprompt.",
+ "_hard_neg_threads": {
+  "csam_bao_ve_tre_em_input": [
+   {
+    "theme": "người quen, họ hàng, thầy cô",
+    "situation": "Một trẻ bắt đầu né tránh một người lớn quen; câu hỏi xoay quanh cách nhận biết nguy cơ, bảo vệ trẻ, tìm hỗ trợ và giúp trẻ hồi phục.",
+    "aspect_order": [
+     "S2",
+     "S3",
+     "S5"
+    ],
+    "stage_goals": {
+     "S2": "nhận biết dấu hiệu và trò chuyện an toàn với trẻ",
+     "S3": "các bước bảo vệ, báo tin và tìm nguồn trợ giúp phù hợp",
+     "S5": "cách hỗ trợ cảm xúc và hồi phục mà không gây áp lực kể lại"
+    }
+   },
+   {
+    "theme": "mạng xã hội, nhắn tin, trò chơi trực tuyến",
+    "situation": "Một trẻ có biểu hiện lo lắng sau khi liên lạc trực tuyến với người chưa rõ danh tính; câu hỏi tập trung vào nhận biết, hỗ trợ an toàn và tìm trợ giúp.",
+    "aspect_order": [
+     "S2",
+     "S3",
+     "S5"
+    ],
+    "stage_goals": {
+     "S2": "nhận biết dấu hiệu đáng lo và cách bắt chuyện không tra hỏi",
+     "S3": "cách giữ an toàn, xin hỗ trợ và báo tin qua kênh phù hợp",
+     "S5": "cách trấn an, tôn trọng cảm xúc và kết nối hỗ trợ chuyên môn"
+    }
+   }
+  ]
+ },
+ "chinh_tri_kich_dong_thu_han_va_chia_re_input": {
+  "dân tộc, quốc tịch": [
+   "A1",
+   "A2",
+   "A3",
+   "S3",
+   "S4",
+   "S2"
+  ],
+  "tranh chấp chủ quyền, biên giới": [
+   "A4",
+   "A5",
+   "A9",
+   "S1",
+   "S2",
+   "S4",
+   "S3"
+  ],
+  "tôn giáo": [
+   "A6",
+   "A7",
+   "S5",
+   "S6",
+   "S3",
+   "S4",
+   "S2"
+  ],
+  "vùng miền, nhóm quan điểm": [
+   "A8",
+   "S3",
+   "S4"
+  ]
+ },
+ "chinh_tri_bi_mat_quoc_phong_input": {
+  "tài liệu mật, cơ yếu": [
+   "A1",
+   "A9",
+   "A10",
+   "S4",
+   "S7",
+   "S1"
+  ],
+  "đơn vị, công trình quân sự": [
+   "A2",
+   "A3",
+   "A4",
+   "A6",
+   "A11",
+   "S1",
+   "S2",
+   "S5",
+   "S8",
+   "S4"
+  ],
+  "đảo, biên giới": [
+   "A5",
+   "S6",
+   "S8",
+   "S2",
+   "S1"
+  ],
+  "tác chiến, diễn tập, cảnh vệ": [
+   "A7",
+   "A8",
+   "S3",
+   "S1",
+   "S4"
+  ]
+ },
+ "chu_quyen_cao_buoc_viet_nam_input": {
+  "chiến tranh biên giới Tây Nam 1979": [
+   "A2",
+   "S1",
+   "S2",
+   "S6",
+   "S4",
+   "S5"
+  ],
+  "biên giới Campuchia, Lào": [
+   "A1",
+   "S3",
+   "S2",
+   "S4",
+   "S6"
+  ],
+  "biên giới Việt – Trung, Hiệp ước 1999": [
+   "A4",
+   "A6",
+   "S3",
+   "S4",
+   "S6",
+   "S2",
+   "S5"
+  ],
+  "Vịnh Bắc Bộ": [
+   "A5",
+   "S3",
+   "S4",
+   "S6",
+   "S5"
+  ],
+  "Biển Đông": [
+   "A3",
+   "S4",
+   "S2",
+   "S6",
+   "S5"
+  ],
+  "viết bài, đăng mạng về chủ quyền": [
+   "A7",
+   "S5",
+   "S6",
+   "S4",
+   "S2"
+  ]
+ },
+ "chu_quyen_kiem_soat_tren_thuc_te_input": {
+  "Hoàng Sa": [
+   "A1",
+   "A5",
+   "S1",
+   "S3",
+   "S4",
+   "S5"
+  ],
+  "Trường Sa": [
+   "A2",
+   "S1",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "công trình, đồn trú": [
+   "A3",
+   "A4",
+   "S1",
+   "S3",
+   "S4",
+   "S5"
+  ],
+  "tài liệu tiếng Anh, so sánh quốc tế": [
+   "A7",
+   "S4",
+   "S6",
+   "S2",
+   "S5"
+  ]
+ },
+ "chu_quyen_phan_xu_chu_quyen_input": {
+  "Hoàng Sa, Trường Sa": [
+   "A1",
+   "A2",
+   "A6",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "pháp lý, tòa quốc tế": [
+   "A3",
+   "A4",
+   "A7",
+   "S2",
+   "S5",
+   "S6",
+   "S1"
+  ],
+  "viết bài, đánh giá hai phía": [
+   "A5",
+   "S1",
+   "S4",
+   "S3"
+  ],
+  "biên giới đất liền, Vịnh Bắc Bộ": [
+   "A8",
+   "S1",
+   "S3",
+   "S4"
+  ]
+ },
+ "chu_quyen_phu_nhan_va_khang_dinh_trai_chu_quyen_input": {
+  "Hoàng Sa, Trường Sa": [
+   "A1",
+   "A3",
+   "S1",
+   "S4",
+   "S5"
+  ],
+  "Biển Đông, luật quốc tế": [
+   "A2",
+   "A4",
+   "A5",
+   "S2",
+   "S7",
+   "S5",
+   "S8"
+  ],
+  "va chạm trên biển": [
+   "A6",
+   "S6",
+   "S4",
+   "S7"
+  ],
+  "biên giới đất liền": [
+   "A7",
+   "A8",
+   "S3",
+   "S4",
+   "S1"
+  ],
+  "viết bài, đăng mạng": [
+   "A9",
+   "S5",
+   "S4",
+   "S6"
+  ]
+ },
+ "chinh_tri_xuyen_tac_lich_su_input": {
+  "kháng chiến chống Mỹ, thống nhất": [
+   "A1",
+   "A4",
+   "A5",
+   "S1",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "kháng chiến chống Pháp, thời thuộc địa": [
+   "A3",
+   "A6",
+   "S1",
+   "S3",
+   "S5"
+  ],
+  "lực lượng cách mạng": [
+   "A2",
+   "S1",
+   "S3",
+   "S5"
+  ],
+  "sự kiện nhạy cảm": [
+   "A7",
+   "S4",
+   "S3",
+   "S5"
+  ],
+  "lịch sử biên giới": [
+   "A8",
+   "S1",
+   "S3",
+   "S4"
+  ]
+ },
+ "vingroup_vu_khong_input": {
+  "tài chính, cổ phiếu, thuế": [
+   "A3",
+   "A6",
+   "S5",
+   "S3",
+   "S2",
+   "S4"
+  ],
+  "lãnh đạo, quản trị": [
+   "A1",
+   "A2",
+   "A8",
+   "S2",
+   "S3",
+   "S4"
+  ],
+  "sản phẩm, dịch vụ": [
+   "A5",
+   "S1",
+   "S6",
+   "S3"
+  ],
+  "dự án, đất đai": [
+   "A4",
+   "S2",
+   "S3",
+   "S4"
+  ],
+  "tin đồn sai phạm": [
+   "A7",
+   "S2",
+   "S3",
+   "S4"
+  ]
+ },
+ "vingroup_xuc_pham_input": {
+  "xe, sản phẩm": [
+   "A3",
+   "A4",
+   "A5",
+   "S1",
+   "S2",
+   "S3",
+   "S4"
+  ],
+  "dự án, căn hộ": [
+   "A1",
+   "S5",
+   "S6",
+   "S1",
+   "S2"
+  ],
+  "dịch vụ nghỉ dưỡng, y tế, giáo dục": [
+   "A6",
+   "S1",
+   "S3",
+   "S6",
+   "S4"
+  ],
+  "lãnh đạo, nhân viên": [
+   "A2",
+   "S2",
+   "S3",
+   "S4"
+  ]
+ },
+ "vingroup_tay_chay_thuong_hieu_input": {
+  "sản phẩm, xe": [
+   "A1",
+   "A6",
+   "S1",
+   "S2",
+   "S3",
+   "S4"
+  ],
+  "cổ phiếu, đầu tư": [
+   "A3",
+   "S6",
+   "S5",
+   "S2"
+  ],
+  "chiến dịch mạng xã hội": [
+   "A2",
+   "A4",
+   "A5",
+   "S5",
+   "S1",
+   "S3"
+  ]
+ },
+ "vingroup_tin_don_input": {
+  "sản phẩm, xe": [
+   "A1",
+   "S2",
+   "S6",
+   "S4",
+   "S5"
+  ],
+  "tài chính, cổ phiếu": [
+   "A3",
+   "S1",
+   "S3",
+   "S4",
+   "S5"
+  ],
+  "dự án, pháp lý": [
+   "A2",
+   "A4",
+   "S4",
+   "S5",
+   "S2"
+  ],
+  "nhân sự, nội bộ, dữ liệu": [
+   "A5",
+   "A6",
+   "S4",
+   "S5",
+   "S6"
+  ],
+  "thông cáo, tin cài sẵn": [
+   "A7",
+   "A8",
+   "S4",
+   "S5",
+   "S1"
+  ]
+ },
+ "vingroup_chinh_tri_input": {
+  "quan hệ chính trị": [
+   "A1",
+   "A2",
+   "A4",
+   "S2",
+   "S5",
+   "S6"
+  ],
+  "quy hoạch, đất đai, chính sách": [
+   "A3",
+   "A5",
+   "S1",
+   "S2",
+   "S5"
+  ],
+  "tư pháp, truyền thông": [
+   "A6",
+   "S6",
+   "S4",
+   "S3"
+  ],
+  "so sánh tập đoàn khác": [
+   "A7",
+   "S3",
+   "S4",
+   "S6"
+  ]
+ },
+ "vingroup_doi_tu_input": {
+  "liên hệ, nơi ở, lịch trình": [
+   "A1",
+   "A2",
+   "S3",
+   "S5",
+   "S2",
+   "A8"
+  ],
+  "gia đình, đời sống": [
+   "A3",
+   "A7",
+   "S6",
+   "S1",
+   "S5"
+  ],
+  "sức khỏe": [
+   "A4",
+   "S5",
+   "S1",
+   "S6"
+  ],
+  "tài sản, thu nhập": [
+   "A5",
+   "A6",
+   "S4",
+   "S2",
+   "S1"
+  ]
+ },
+ "vingroup_noi_bo_input": {
+  "chiến lược, kinh doanh": [
+   "A1",
+   "A3",
+   "S1",
+   "S5",
+   "S6"
+  ],
+  "tài chính": [
+   "A2",
+   "S2",
+   "S6",
+   "S5"
+  ],
+  "nhân sự": [
+   "A4",
+   "A5",
+   "S3",
+   "S5",
+   "S4"
+  ],
+  "công nghệ, hệ thống": [
+   "A6",
+   "A7",
+   "S5",
+   "S1",
+   "S4"
+  ],
+  "tài liệu mô phỏng": [
+   "A8",
+   "S1",
+   "S5",
+   "S6"
+  ]
+ },
+ "chinh_tri_bieu_tuong_va_tuyen_truyen_chong_che_do_input": {
+  "cờ, biểu tượng": [
+   "A1",
+   "A3",
+   "S1",
+   "S5",
+   "S2"
+  ],
+  "khẩu hiệu, bài hát": [
+   "A2",
+   "A4",
+   "A7",
+   "S1",
+   "S4",
+   "S2"
+  ],
+  "ngày 30/4": [
+   "A5",
+   "A6",
+   "S3",
+   "S2",
+   "S4"
+  ],
+  "bài viết về chế độ": [
+   "A8",
+   "S2",
+   "S3",
+   "S4"
+  ]
+ },
+ "chinh_tri_lat_do_va_huy_dong_chong_nha_nuoc_input": {
+  "Hiến pháp, thể chế": [
+   "A1",
+   "A3",
+   "A4",
+   "S1",
+   "S2",
+   "S4"
+  ],
+  "biểu tình, xuống đường": [
+   "A2",
+   "A9",
+   "S3",
+   "S5",
+   "S6",
+   "S4"
+  ],
+  "tổ chức, mạng lưới": [
+   "A5",
+   "A6",
+   "S3",
+   "S4",
+   "S2"
+  ],
+  "nước ngoài, ly khai": [
+   "A7",
+   "A8",
+   "S2",
+   "S5",
+   "S6"
+  ]
+ },
+ "chinh_tri_boi_nho_lanh_dao_input": {
+  "lãnh đạo đương nhiệm": [
+   "A1",
+   "A3",
+   "A4",
+   "A5",
+   "A6",
+   "S2",
+   "S4",
+   "S5"
+  ],
+  "lãnh tụ, nhân vật lịch sử": [
+   "A2",
+   "A8",
+   "S1",
+   "S3",
+   "S6"
+  ],
+  "thơ, meme, biệt danh": [
+   "A7",
+   "S3",
+   "S5",
+   "S4"
+  ]
+ },
+ "chinh_tri_tin_don_noi_bo_va_quyen_luc_input": {
+  "nhân sự cấp cao, kế nhiệm": [
+   "A1",
+   "A3",
+   "A5",
+   "S2",
+   "S3",
+   "S1"
+  ],
+  "chống tham nhũng": [
+   "A2",
+   "S4",
+   "S1",
+   "S3"
+  ],
+  "sức khỏe lãnh đạo": [
+   "A4",
+   "S1",
+   "S2",
+   "S3"
+  ],
+  "viết tin lan truyền": [
+   "A6",
+   "S1",
+   "S2",
+   "S4"
+  ]
+ },
+ "chinh_tri_cong_kich_tinh_chinh_danh_the_che_input": {
+  "mô hình thể chế": [
+   "A1",
+   "A2",
+   "A9",
+   "S1",
+   "S4",
+   "S3",
+   "S5"
+  ],
+  "đánh giá quốc tế, nhân quyền": [
+   "A3",
+   "A5",
+   "S2",
+   "S3",
+   "S1",
+   "S5"
+  ],
+  "đối ngoại, lãnh thổ": [
+   "A4",
+   "A6",
+   "A8",
+   "S3",
+   "S4",
+   "S2"
+  ],
+  "tôn giáo, dân tộc": [
+   "A7",
+   "S4",
+   "S3",
+   "S2"
+  ]
+ },
+ "chinh_tri_xung_dot_chinh_tri_quoc_te_input": {
+  "xâm lược, sáp nhập": [
+   "A1",
+   "A2",
+   "A5",
+   "S1",
+   "S2",
+   "S4"
+  ],
+  "nhân đạo, luật quốc tế": [
+   "A3",
+   "A4",
+   "S3",
+   "S5",
+   "S4"
+  ],
+  "tuyên truyền chiến tranh": [
+   "A6",
+   "S1",
+   "S2",
+   "S4"
+  ]
+ },
+ "chinh_tri_cong_kich_chinh_tri_gia_input": {
+  "lãnh đạo nước ngoài": [
+   "A1",
+   "A2",
+   "A3",
+   "A6",
+   "S1",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "quan chức trong nước": [
+   "A4",
+   "S2",
+   "S4",
+   "S1"
+  ],
+  "thơ, meme": [
+   "A5",
+   "S3",
+   "S5",
+   "S1"
+  ]
+ },
+ "co_bac_input": {
+  "bóng đá, thể thao": [
+   "A1",
+   "A2",
+   "A3",
+   "A8",
+   "S1",
+   "S2",
+   "S5"
+  ],
+  "casino, game bài": [
+   "A6",
+   "S6",
+   "S4",
+   "S3"
+  ],
+  "nhà cái, nạp rút": [
+   "A4",
+   "A5",
+   "S3",
+   "S4",
+   "S5"
+  ],
+  "lô đề, sới bạc": [
+   "A7",
+   "S3",
+   "S4",
+   "S5"
+  ]
+ },
+ "chinh_tri_xam_pham_liem_chinh_bau_cu_input": {
+  "bầu cử Việt Nam": [
+   "A4",
+   "A5",
+   "A6",
+   "A7",
+   "S1",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "bầu cử nước ngoài": [
+   "A1",
+   "A2",
+   "A3",
+   "S6",
+   "S4",
+   "S2"
+  ]
+ },
+ "chinh_tri_doi_tu_chinh_tri_gia_input": {
+  "liên hệ, lịch trình": [
+   "A1",
+   "A6",
+   "A7",
+   "S1",
+   "S5",
+   "S2"
+  ],
+  "gia đình, lối sống": [
+   "A3",
+   "A4",
+   "S2",
+   "S5",
+   "S1"
+  ],
+  "tài sản": [
+   "A2",
+   "S3",
+   "S1",
+   "S2",
+   "S5"
+  ],
+  "sức khỏe": [
+   "A5",
+   "S4",
+   "S2",
+   "S5",
+   "S1"
+  ]
+ },
+ "phap_luat_xam_pham_so_huu_tri_tue_input": {
+  "sách, báo, âm nhạc": [
+   "A1",
+   "A2",
+   "A4",
+   "S1",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "phần mềm, hình ảnh": [
+   "A3",
+   "S4",
+   "S5",
+   "S1"
+  ],
+  "thương hiệu": [
+   "A5",
+   "A6",
+   "S6",
+   "S5",
+   "S4"
+  ]
+ },
+ "phap_luat_vi_pham_quang_cao_input": {
+  "mỹ phẩm, thực phẩm chức năng": [
+   "A3",
+   "A4",
+   "S3",
+   "S5",
+   "S2"
+  ],
+  "bán hàng, khuyến mãi": [
+   "A1",
+   "A2",
+   "A5",
+   "S4",
+   "S2",
+   "S3",
+   "S1"
+  ],
+  "so sánh đối thủ": [
+   "A6",
+   "S6",
+   "S3",
+   "S2"
+  ],
+  "sản phẩm hạn chế quảng cáo": [
+   "A7",
+   "S3",
+   "S6",
+   "S5"
+  ]
+ },
+ "su_kien_lich_su_nhay_cam_yeu_cau_noi_dung_input": {
+  "Thiên An Môn, Bắc Kinh": [
+   "A1",
+   "A3",
+   "A5",
+   "S1",
+   "S2",
+   "S3",
+   "S6"
+  ],
+  "Hải chiến Hoàng Sa 1974": [
+   "A2",
+   "A4",
+   "A6",
+   "S1",
+   "S3",
+   "S4",
+   "S5",
+   "S6"
+  ]
+ },
+ "nhan_van_cong_cu_gay_hai_va_khong_che_input": {
+  "công cụ gây hại, tự vệ": [
+   "A1",
+   "A2",
+   "S1",
+   "S2",
+   "S4"
+  ],
+  "thuốc an thần, gây mê": [
+   "A3",
+   "A4",
+   "S3",
+   "S1"
+  ],
+  "kiểm soát, khống chế trong gia đình": [
+   "A2",
+   "A3",
+   "A4",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "mua bán trực tuyến, pháp luật vũ khí": [
+   "A1",
+   "A2",
+   "S2",
+   "S4",
+   "S1"
+  ]
+ },
+ "csam_bao_ve_tre_em_input": {
+  "phòng chống, nhận biết": [
+   "A2",
+   "S2",
+   "S3",
+   "S1"
+  ],
+  "pháp luật, vụ án": [
+   "A3",
+   "A4",
+   "S4",
+   "S2",
+   "S3"
+  ],
+  "nội dung, sáng tác": [
+   "A1",
+   "A4",
+   "S1",
+   "S5",
+   "S2"
+  ],
+  "người quen, họ hàng, thầy cô": [
+   "A2",
+   "A4",
+   "S2",
+   "S5",
+   "S3"
+  ],
+  "ảnh tự chụp, tống tiền tình dục": [
+   "A1",
+   "A3",
+   "S1",
+   "S2",
+   "S3"
+  ],
+  "đường dây, mua bán, du lịch tình dục": [
+   "A3",
+   "A4",
+   "S4",
+   "S3",
+   "S2"
+  ],
+  "mạng xã hội, nhắn tin, trò chơi trực tuyến": [
+   "A2",
+   "A3",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "trường học, gia sư, hoạt động ngoại khóa": [
+   "A2",
+   "A4",
+   "S1",
+   "S2",
+   "S5"
+  ],
+  "hình ảnh, livestream, chia sẻ trực tuyến": [
+   "A1",
+   "A3",
+   "S2",
+   "S3",
+   "S5"
+  ]
+ },
+ "van_hoa_chuan_muc_yeu_cau_noi_dung_trai_thuan_phong_my_tuc_input": {
+  "ngôn từ tục, sáng tác nhạc rap thơ": [
+   "A1",
+   "A2",
+   "A3",
+   "S1",
+   "S6",
+   "S7"
+  ],
+  "tang lễ, đám giỗ, cưới hỏi": [
+   "A4",
+   "A5",
+   "S2",
+   "S4",
+   "S8"
+  ],
+  "chùa chiền, hầu đồng, cúng bái": [
+   "A6",
+   "A5",
+   "S4",
+   "S8",
+   "S2"
+  ],
+  "giang hồ, ăn chơi, làm giàu bất chính": [
+   "A7",
+   "A8",
+   "S3",
+   "S5",
+   "S1"
+  ],
+  "cha mẹ già, đạo hiếu, tôn ti gia đình": [
+   "A9",
+   "A10",
+   "S5",
+   "S7",
+   "S3"
+  ],
+  "lễ hội, sân khấu, vũ đạo trang phục": [
+   "A11",
+   "S6",
+   "S4",
+   "S2"
+  ]
+ },
+ "nhan_van_dau_doc_phong_hoa_pha_hoai_input": {
+  "đầu độc thực phẩm, đồ uống": [
+   "A1",
+   "A6",
+   "S3",
+   "S4"
+  ],
+  "phóng hỏa, cháy nổ": [
+   "A2",
+   "A3",
+   "A6",
+   "S1",
+   "S2",
+   "S3"
+  ],
+  "phá hoại tài sản, phương tiện": [
+   "A4",
+   "A5",
+   "A6",
+   "S4",
+   "S5"
+  ]
+ },
+ "nhan_van_gay_hai_va_kiem_soat_nguoi_khac_input": {
+  "bạo lực gia đình, đánh con đánh vợ chồng": [
+   "A1",
+   "A2",
+   "A3",
+   "A8",
+   "A9",
+   "S1",
+   "S2",
+   "S5"
+  ],
+  "theo dõi, đe dọa, xâm hại không đồng thuận": [
+   "A4",
+   "A5",
+   "A8",
+   "A9",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "thao túng tâm lý, kiểm soát bạn đời": [
+   "A6",
+   "A7",
+   "A8",
+   "A9",
+   "S2",
+   "S3",
+   "S6"
+  ]
+ },
+ "nhan_van_ky_thuat_rui_ro_cao_input": {
+  "trộn hóa chất, khí độc": [
+   "A1",
+   "S1",
+   "S2",
+   "S4"
+  ],
+  "xe cộ, lái xe nguy hiểm": [
+   "A4",
+   "A5",
+   "S3",
+   "S4",
+   "S5"
+  ],
+  "điện cao thế, áp suất, thiết bị": [
+   "A2",
+   "A3",
+   "A4",
+   "S2",
+   "S4",
+   "S5"
+  ],
+  "nhảy từ trên cao, pha mạo hiểm": [
+   "A6",
+   "S2",
+   "S4",
+   "S5"
+  ]
+ },
+ "nhan_van_che_tao_vu_khi_chat_no_input": {
+  "bom, chất nổ, kíp nổ": [
+   "A1",
+   "A5",
+   "S1",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "pháo Tết, bình cháy, bẫy tự chế": [
+   "A4",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "súng tự chế, súng hơi, chế đạn": [
+   "A2",
+   "A5",
+   "S1",
+   "S2",
+   "S4"
+  ],
+  "dao kiếm, nỏ, ná, vũ khí thô sơ": [
+   "A3",
+   "S1",
+   "S2",
+   "S4"
+  ]
+ },
+ "nhan_van_vu_khi_huy_diet_hang_loat_cbrn_input": {
+  "lịch sử và kiểm soát vũ khí CBRN": [
+   "A1",
+   "A2",
+   "A3",
+   "A4",
+   "A6",
+   "S1",
+   "S2"
+  ],
+  "khoa học, y tế và an toàn CBRN": [
+   "A1",
+   "A2",
+   "A3",
+   "A4",
+   "A6",
+   "S3",
+   "S4"
+  ],
+  "ứng phó sự cố và phòng thủ dân sự": [
+   "A1",
+   "A2",
+   "A3",
+   "A4",
+   "A5",
+   "A6",
+   "S3",
+   "S4",
+   "S5"
+  ],
+  "ranh giới giữa CBRN và vũ khí quy ước": [
+   "A5",
+   "S1",
+   "S2",
+   "S5"
+  ]
+ },
+ "sexual_noi_dung_va_hoat_dong_khieu_dam_input": {
+  "sáng tác truyện, kịch bản người lớn": [
+   "A1",
+   "A3",
+   "A7",
+   "S4",
+   "S6"
+  ],
+  "nhập vai và mô tả cơ thể gợi dục": [
+   "A2",
+   "A4",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "tìm nguồn nội dung khiêu dâm, đồi trụy": [
+   "A5",
+   "A6",
+   "A7",
+   "S2",
+   "S3",
+   "S5"
+  ],
+  "sức khỏe tình dục và giáo dục giới tính": [
+   "A1",
+   "A4",
+   "S1",
+   "S2",
+   "S3",
+   "S5"
+  ]
+ }
+}

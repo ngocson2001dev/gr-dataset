@@ -1,0 +1,754 @@
+[
+ {
+  "pair": "chinh_tri_kich_dong_thu_han_va_chia_re",
+  "tier": "S0",
+  "input": "chinh_tri_kich_dong_thu_han_va_chia_re_input",
+  "output": "chinh_tri_kich_dong_thu_han_va_chia_re_output",
+  "user_intent_id": "Politics_Hate_and_Division_Incitement_input",
+  "assistant_intent_id": "Politics_Hate_and_Division_Incitement_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chu_quyen_cao_buoc_viet_nam",
+  "tier": "S0",
+  "input": "chu_quyen_cao_buoc_viet_nam_input",
+  "output": "chu_quyen_cao_buoc_viet_nam_output",
+  "user_intent_id": "Sovereignty_Vietnam_Accusation_input",
+  "assistant_intent_id": "Sovereignty_Vietnam_Accusation_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chu_quyen_kiem_soat_tren_thuc_te",
+  "tier": "S0",
+  "input": "chu_quyen_kiem_soat_tren_thuc_te_input",
+  "output": "chu_quyen_phu_nhan_va_khang_dinh_trai_chu_quyen_output",
+  "user_intent_id": "Sovereignty_DeFacto_Control_input",
+  "assistant_intent_id": "Sovereignty_Denial_and_False_Claim_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chu_quyen_phan_xu_chu_quyen",
+  "tier": "S0",
+  "input": "chu_quyen_phan_xu_chu_quyen_input",
+  "output": "chu_quyen_phan_xu_chu_quyen_output",
+  "user_intent_id": "Sovereignty_Adjudication_Request_input",
+  "assistant_intent_id": "Sovereignty_Adjudication_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chu_quyen_phu_nhan_va_khang_dinh_trai_chu_quyen",
+  "tier": "S0",
+  "input": "chu_quyen_phu_nhan_va_khang_dinh_trai_chu_quyen_input",
+  "output": "chu_quyen_phu_nhan_va_khang_dinh_trai_chu_quyen_output",
+  "user_intent_id": "Sovereignty_Denial_and_False_Claim_input",
+  "assistant_intent_id": "Sovereignty_Denial_and_False_Claim_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_xuyen_tac_lich_su",
+  "tier": "S0",
+  "input": "chinh_tri_xuyen_tac_lich_su_input",
+  "output": "chinh_tri_xuyen_tac_lich_su_output",
+  "user_intent_id": "Politics_Historical_Revisionism_input",
+  "assistant_intent_id": "Politics_Historical_Revisionism_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "vingroup_vu_khong",
+  "tier": "S0",
+  "input": "vingroup_vu_khong_input",
+  "output": "vingroup_vu_khong_output",
+  "user_intent_id": "Vingroup_Defamation_input",
+  "assistant_intent_id": "Vingroup_Defamation_output",
+  "extra_output": [],
+    "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "vingroup_xuc_pham",
+  "tier": "S0",
+  "input": "vingroup_xuc_pham_input",
+  "output": "vingroup_xuc_pham_output",
+  "user_intent_id": "Vingroup_Insult_Harassment_input",
+  "assistant_intent_id": "Vingroup_Insult_Harassment_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "vingroup_tay_chay_thuong_hieu",
+  "tier": "S0",
+  "input": "vingroup_tay_chay_thuong_hieu_input",
+  "output": "vingroup_tay_chay_thuong_hieu_output",
+  "user_intent_id": "Vingroup_Brand_Boycott_input",
+  "assistant_intent_id": "Vingroup_Brand_Boycott_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "vingroup_tin_don",
+  "tier": "S0",
+  "input": "vingroup_tin_don_input",
+  "output": "vingroup_tin_don_output",
+  "user_intent_id": "Vingroup_Rumor_input",
+  "assistant_intent_id": "Vingroup_Rumor_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "vingroup_chinh_tri",
+  "tier": "S0",
+  "input": "vingroup_chinh_tri_input",
+  "output": "vingroup_chinh_tri_output",
+  "user_intent_id": "Vingroup_Political_Association_input",
+  "assistant_intent_id": "Vingroup_Political_Association_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "vingroup_doi_tu",
+  "tier": "S0",
+  "input": "vingroup_doi_tu_input",
+  "output": "vingroup_doi_tu_output",
+  "user_intent_id": "Vingroup_Privacy_input",
+  "assistant_intent_id": "Vingroup_Privacy_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "vingroup_noi_bo",
+  "tier": "S0",
+  "input": "vingroup_noi_bo_input",
+  "output": "vingroup_noi_bo_output",
+  "user_intent_id": "Vingroup_Internal_Confidential_input",
+  "assistant_intent_id": "Vingroup_Internal_Confidential_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_an_ninh_quoc_gia",
+  "tier": "S0",
+  "input": "chinh_tri_an_ninh_quoc_gia_input",
+  "output": "chinh_tri_an_ninh_quoc_gia_output",
+  "user_intent_id": "Politics_National_Security_input",
+  "assistant_intent_id": "Politics_National_Security_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_bieu_tuong_va_tuyen_truyen_chong_che_do",
+  "tier": "S0",
+  "input": "chinh_tri_bieu_tuong_va_tuyen_truyen_chong_che_do_input",
+  "output": "chinh_tri_bieu_tuong_va_tuyen_truyen_chong_che_do_output",
+  "user_intent_id": "Politics_Anti_Regime_Symbols_and_Propaganda_input",
+  "assistant_intent_id": "Politics_Anti_Regime_Symbols_and_Propaganda_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_lat_do_va_huy_dong_chong_nha_nuoc",
+  "tier": "S0",
+  "input": "chinh_tri_lat_do_va_huy_dong_chong_nha_nuoc_input",
+  "output": "chinh_tri_lat_do_va_huy_dong_chong_nha_nuoc_output",
+  "user_intent_id": "Politics_Regime_Change_and_Anti_State_Mobilization_input",
+  "assistant_intent_id": "Politics_Regime_Change_and_Anti_State_Mobilization_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_boi_nho_lanh_dao",
+  "tier": "S0",
+  "input": "chinh_tri_boi_nho_lanh_dao_input",
+  "output": "chinh_tri_boi_nho_lanh_dao_output",
+  "user_intent_id": "Politics_Protected_Person_Defamation_input",
+  "assistant_intent_id": "Politics_Protected_Person_Defamation_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_tin_don_noi_bo_va_quyen_luc",
+  "tier": "S0",
+  "input": "chinh_tri_tin_don_noi_bo_va_quyen_luc_input",
+  "output": "chinh_tri_tin_don_noi_bo_va_quyen_luc_output",
+  "user_intent_id": "Politics_Political_Rumor_and_Internal_Power_Disinformation_input",
+  "assistant_intent_id": "Politics_Political_Rumor_and_Internal_Power_Disinformation_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_cong_kich_tinh_chinh_danh_the_che",
+  "tier": "S0",
+  "input": "chinh_tri_cong_kich_tinh_chinh_danh_the_che_input",
+  "output": "chinh_tri_cong_kich_tinh_chinh_danh_the_che_output",
+  "user_intent_id": "Politics_State_System_Legitimacy_Attack_input",
+  "assistant_intent_id": "Politics_State_System_Legitimacy_Attack_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_xung_dot_chinh_tri_quoc_te",
+  "tier": "S0",
+  "input": "chinh_tri_xung_dot_chinh_tri_quoc_te_input",
+  "output": "chinh_tri_xung_dot_chinh_tri_quoc_te_output",
+  "user_intent_id": "Politics_International_Conflict_input",
+  "assistant_intent_id": "Politics_International_Conflict_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_cong_kich_chinh_tri_gia",
+  "tier": "S0",
+  "input": "chinh_tri_cong_kich_chinh_tri_gia_input",
+  "output": "chinh_tri_cong_kich_chinh_tri_gia_output",
+  "user_intent_id": "Politics_Politician_Insult_input",
+  "assistant_intent_id": "Politics_Politician_Insult_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "csam_bao_ve_tre_em",
+  "sensitive": true,
+  "tier": "S1",
+  "input": "csam_bao_ve_tre_em_input",
+  "output": "csam_bao_ve_tre_em_output",
+  "user_intent_id": "Illegal_CSAM_input",
+  "assistant_intent_id": "Illegal_CSAM_output",
+  "cells": [
+   "SS",
+   "VV",
+   "VS"
+  ],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ],
+  "extra_output": []
+ },
+ {
+  "pair": "phap_luat_san_xuat_ma_tuy",
+  "tier": "S1",
+  "input": "phap_luat_san_xuat_ma_tuy_input",
+  "output": "phap_luat_san_xuat_ma_tuy_output",
+  "user_intent_id": "Illegal_Drug_Production_input",
+  "assistant_intent_id": "Illegal_Drug_Production_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "phap_luat_mua_ban_van_chuyen_hang_cam",
+  "tier": "S1",
+  "input": "phap_luat_mua_ban_van_chuyen_hang_cam_input",
+  "output": "phap_luat_mua_ban_van_chuyen_hang_cam_output",
+  "user_intent_id": "Illegal_Contraband_Trafficking_input",
+  "assistant_intent_id": "Illegal_Contraband_Trafficking_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "co_bac",
+  "tier": "S1",
+  "input": "co_bac_input",
+  "output": "co_bac_output",
+  "user_intent_id": "Illegal_Gambling_input",
+  "assistant_intent_id": "Illegal_Gambling_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "phap_luat_lua_dao_chiem_doat_tai_san",
+  "tier": "S1",
+  "input": "phap_luat_lua_dao_chiem_doat_tai_san_input",
+  "output": "phap_luat_lua_dao_chiem_doat_tai_san_output",
+  "user_intent_id": "Illegal_Fraud_Scam_input",
+  "assistant_intent_id": "Illegal_Fraud_Scam_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_xam_pham_liem_chinh_bau_cu",
+  "tier": "S1",
+  "input": "chinh_tri_xam_pham_liem_chinh_bau_cu_input",
+  "output": "chinh_tri_xam_pham_liem_chinh_bau_cu_output",
+  "user_intent_id": "Politics_Election_Integrity_input",
+  "assistant_intent_id": "Politics_Election_Integrity_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "chinh_tri_doi_tu_chinh_tri_gia",
+  "tier": "S1",
+  "input": "chinh_tri_doi_tu_chinh_tri_gia_input",
+  "output": "chinh_tri_doi_tu_chinh_tri_gia_output",
+  "user_intent_id": "Politics_Protected_Person_Privacy_input",
+  "assistant_intent_id": "Politics_Protected_Person_Privacy_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_tu_hai",
+  "tier": "S1",
+  "input": "nhan_van_tu_hai_input",
+  "output": "nhan_van_tu_hai_output",
+  "user_intent_id": "Humanity_SelfHarm_input",
+  "assistant_intent_id": "Humanity_SelfHarm_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_xui_giuc_nguoi_khac_tu_sat",
+  "tier": "S1",
+  "input": "nhan_van_xui_giuc_nguoi_khac_tu_sat_input",
+  "output": "nhan_van_xui_giuc_nguoi_khac_tu_sat_output",
+  "user_intent_id": "humanity_harmothers_coercivecontrol_input",
+  "assistant_intent_id": "humanity_harmothers_coercivecontrol_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_cong_cu_gay_hai_va_khong_che",
+  "tier": "S1",
+  "input": "nhan_van_cong_cu_gay_hai_va_khong_che_input",
+  "output": "nhan_van_gay_hai_nguoi_khac_output",
+  "user_intent_id": "Humanity_HarmTool_Incapacitation_input",
+  "assistant_intent_id": "Humanity_HarmOthers_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_dau_doc_phong_hoa_pha_hoai",
+  "sensitive": true,
+  "tier": "S1",
+  "input": "nhan_van_dau_doc_phong_hoa_pha_hoai_input",
+  "output": "nhan_van_gay_hai_nguoi_khac_output",
+  "user_intent_id": "Humanity_Poison_Arson_Sabotage_input",
+  "assistant_intent_id": "Humanity_HarmOthers_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_gay_hai_va_kiem_soat_nguoi_khac",
+  "tier": "S1",
+  "input": "nhan_van_gay_hai_va_kiem_soat_nguoi_khac_input",
+  "output": "nhan_van_bao_luc_gia_dinh_output",
+  "user_intent_id": "Humanity_HarmOthers_CoerciveControl_input",
+  "assistant_intent_id": "Humanity_DomesticViolence_output",
+  "extra_output": [
+   "nhan_van_gay_hai_nguoi_khac_output"
+  ],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_ky_thuat_rui_ro_cao",
+  "sensitive": true,
+  "tier": "S1",
+  "input": "nhan_van_ky_thuat_rui_ro_cao_input",
+  "output": "nhan_van_gay_hai_nguoi_khac_output",
+  "user_intent_id": "Humanity_UnsafeHighRisk_Technical_input",
+  "assistant_intent_id": "Humanity_HarmOthers_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_che_tao_vu_khi_chat_no",
+  "tier": "S2",
+  "input": "nhan_van_che_tao_vu_khi_chat_no_input",
+  "output": "nhan_van_che_tao_vu_khi_chat_no_output",
+  "user_intent_id": "Humanity_Weapon_Explosive_Device_input",
+  "assistant_intent_id": "Humanity_Weapon_Explosive_Device_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "nhan_van_vu_khi_huy_diet_hang_loat_cbrn",
+  "sensitive": true,
+  "tier": "S2",
+  "input": "nhan_van_vu_khi_huy_diet_hang_loat_cbrn_input",
+  "output": "nhan_van_vu_khi_huy_diet_hang_loat_cbrn_output",
+  "user_intent_id": "Humanity_CBRN_MassDestruction_input",
+  "assistant_intent_id": "Humanity_CBRN_MassDestruction_output",
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ],
+  "extra_output": []
+ },
+ {
+  "pair": "sexual_noi_dung_va_hoat_dong_khieu_dam",
+  "tier": "S2",
+  "input": "sexual_noi_dung_va_hoat_dong_khieu_dam_input",
+  "output": "sexual_noi_dung_va_hoat_dong_khieu_dam_output",
+  "user_intent_id": "Sexual_Adult_Content_input",
+  "assistant_intent_id": "Sexual_Adult_Content_output",
+  "extra_output": []
+ },
+ {
+  "pair": "phap_luat_xam_pham_so_huu_tri_tue",
+  "tier": "S2",
+  "input": "phap_luat_xam_pham_so_huu_tri_tue_input",
+  "output": "so_huu_tri_tue_tai_tao_noi_dung_output",
+  "user_intent_id": "Illegal_IP_Infringement_input",
+  "assistant_intent_id": "Intellectual_Property_Reproduction_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "phap_luat_vi_pham_quang_cao",
+  "tier": "S2",
+  "input": "phap_luat_vi_pham_quang_cao_input",
+  "output": "phap_luat_vi_pham_quang_cao_output",
+  "user_intent_id": "Illegal_Advertising_Violation_input",
+  "assistant_intent_id": "Illegal_Advertising_Violation_output",
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "CRESCENDO",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "su_kien_lich_su_nhay_cam_yeu_cau_noi_dung",
+  "tier": "S0",
+  "input": "su_kien_lich_su_nhay_cam_yeu_cau_noi_dung_input",
+  "output": "su_kien_lich_su_nhay_cam_yeu_cau_noi_dung_output",
+  "user_intent_id": "International_Political_Event_input",
+  "assistant_intent_id": "International_Political_Event_output",
+  "extra_output": []
+ },
+ {
+  "pair": "van_hoa_su_dung_tu_lanh_dao",
+  "tier": "S0",
+  "input": "chinh_tri_boi_nho_lanh_dao_input",
+  "output": "van_hoa_su_dung_tu_output",
+  "user_intent_id": "Politics_Protected_Person_Defamation_input",
+  "assistant_intent_id": "Culture_Indecent_Content_Generated_output",
+  "cells": [
+   "SS",
+   "SV"
+  ],
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "van_hoa_su_dung_tu_vingroup",
+  "tier": "S0",
+  "input": "vingroup_xuc_pham_input",
+  "output": "van_hoa_su_dung_tu_output",
+  "user_intent_id": "",
+  "assistant_intent_id": "Culture_Indecent_Content_Generated_output",
+  "cells": [
+   "SV"
+  ],
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "van_hoa_su_dung_tu_the_che",
+  "tier": "S0",
+  "input": "chinh_tri_cong_kich_tinh_chinh_danh_the_che_input",
+  "output": "van_hoa_su_dung_tu_output",
+  "user_intent_id": "",
+  "assistant_intent_id": "Culture_Indecent_Content_Generated_output",
+  "cells": [
+   "SV"
+  ],
+  "extra_output": [],
+  "strategy": [
+   "NORMAL",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ },
+ {
+  "pair": "van_hoa_chuan_muc_noi_dung_trai_thuan_phong_my_tuc",
+  "tier": "S2",
+  "input": "van_hoa_chuan_muc_yeu_cau_noi_dung_trai_thuan_phong_my_tuc_input",
+  "output": "van_hoa_chuan_muc_noi_dung_trai_thuan_phong_my_tuc_output",
+  "user_intent_id": "",
+  "assistant_intent_id": "Culture_Indecent_Content_Generated_output",
+  "cells": [
+   "SS",
+   "SV"
+  ],
+  "strategy": [
+   "NORMAL",
+   "PERSIST",
+   "HARD_NEG",
+   "DECOMPOSE",
+   "ROLEPLAY"
+  ]
+ }
+]
